@@ -46,9 +46,12 @@
     <br>
     <br id="counter" count="0">
 
-    <button onclick="document.getElementById('bg').innerHTML = `body {background-color: rgb(255, 242, 4);} .header-color {color: #000;}`" >Yellow Background</button>
-    <button onclick="document.getElementById('bg').innerHTML = `body {background-color: rgb(0, 0, 0);} .header-color {color: #fff;}`" >Black Background</button>
-    <button onclick="document.getElementById('bg').innerHTML = `body {background-color: rgb(80, 253, 195);} .header-color {color: #000;}`
+    <button onclick="document.getElementById('bg').innerHTML = `body {background-color: rgb(255, 242, 4);} .header-color {color: #000;}`; document.getElementById('img').innerHTML = `<img src='https://cdn.discordapp.com/attachments/679683965962944586/869030087557779507/image0.jpg'>`" >Yellow Background</button>
+
+    <button onclick="document.getElementById('bg').innerHTML = `body {background-color: rgb(0, 0, 0);} .header-color {color: #fff;}`; document.getElementById('img').innerHTML = ``;" >Black Background</button>
+    
+    <button onclick="document.getElementById('bg').innerHTML = `body {background-color: rgb(80, 253, 195);} .header-color {color: #000;}`;
+    document.getElementById('img').innerHTML = ``;
     let count = parseInt(document.getElementById('counter').getAttribute('count'))
     count=count+1
     document.getElementById('counter').setAttribute('count', `${count}`)
@@ -60,5 +63,8 @@
     }
     " >Normal Background</button>
     <p id="display-count"></p>
+    <br>
+    <div id='img'>
+    </div>
   </body>
 </html>
