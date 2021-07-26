@@ -52,9 +52,13 @@
     let count = parseInt(document.getElementById('counter').getAttribute('count'))
     count=count+1
     document.getElementById('counter').setAttribute('count', `${count}`)
+    if (count >= 5) {
+      document.getElementById('display-count').innerHTML = count
+    }
     if (count >= 30) {
       document.getElementById('body').innerHTML = `<h1>sex</h1>`
     }
     " >Normal Background</button>
+    <p id="display-count"></p>
   </body>
 </html>
